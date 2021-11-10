@@ -5,7 +5,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -15,8 +21,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#E:\tcm\computadors\computadors_practica6\Mux2.circ" name="7"/>
-  <main name="main"/>
+  <lib desc="file#Mux2.circ" name="7"/>
+  <main name="Multilpexor 8 bits"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -49,8 +55,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
+  <circuit name="Multilpexor 8 bits">
+    <a name="circuit" val="Multilpexor 8 bits"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -62,6 +68,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(420,210)" to="(420,540)"/>
     <wire from="(190,270)" to="(240,270)"/>
     <wire from="(560,470)" to="(560,540)"/>
+    <wire from="(360,540)" to="(360,560)"/>
     <wire from="(310,380)" to="(310,460)"/>
     <wire from="(480,330)" to="(480,540)"/>
     <wire from="(590,510)" to="(590,540)"/>
@@ -97,8 +104,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(520,360)" to="(530,360)"/>
     <wire from="(380,270)" to="(450,270)"/>
     <wire from="(610,490)" to="(620,490)"/>
-    <wire from="(350,540)" to="(420,540)"/>
     <wire from="(590,250)" to="(590,450)"/>
+    <wire from="(360,540)" to="(420,540)"/>
     <wire from="(510,220)" to="(700,220)"/>
     <wire from="(360,230)" to="(360,360)"/>
     <wire from="(330,420)" to="(520,420)"/>
@@ -180,6 +187,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="7" loc="(440,190)" name="main">
       <a name="label" val="Mux2"/>
     </comp>
+    <comp lib="0" loc="(360,560)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
     <comp lib="0" loc="(190,270)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
@@ -187,9 +198,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(240,270)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(350,540)" name="Pin">
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="7" loc="(580,450)" name="main">
       <a name="label" val="Mux2"/>
