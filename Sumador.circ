@@ -6,7 +6,13 @@
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -16,7 +22,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#/Users/esteve/tcm/1r/1rt/intro/practica6/SemiSUM.circ" name="7">
+  <lib desc="file#SemiSUM.circ" name="7">
     <tool name="main">
       <a name="label" val="Semisumador"/>
     </tool>
@@ -77,34 +83,36 @@
     <wire from="(410,370)" to="(450,370)"/>
     <wire from="(410,380)" to="(450,380)"/>
     <wire from="(540,310)" to="(550,310)"/>
-    <comp lib="7" loc="(480,370)" name="main"/>
+    <comp lib="0" loc="(350,350)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="x"/>
+    </comp>
+    <comp lib="1" loc="(690,350)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(350,300)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="C"/>
+    </comp>
     <comp lib="0" loc="(740,350)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(350,350)" name="Pin">
+    <comp lib="0" loc="(350,400)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="x"/>
+      <a name="label" val="y"/>
     </comp>
     <comp lib="0" loc="(740,300)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="7" loc="(580,300)" name="main">
+    <comp lib="7" loc="(480,370)" name="main">
       <a name="label" val="Semisumador"/>
     </comp>
-    <comp lib="0" loc="(350,400)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="y"/>
-    </comp>
-    <comp lib="0" loc="(350,300)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="C"/>
-    </comp>
-    <comp lib="1" loc="(690,350)" name="OR Gate">
-      <a name="inputs" val="2"/>
+    <comp lib="7" loc="(580,300)" name="main">
+      <a name="label" val="Semisumador"/>
     </comp>
   </circuit>
 </project>

@@ -55,24 +55,30 @@
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(780,440)" to="(830,440)"/>
-    <wire from="(620,390)" to="(670,390)"/>
+    <wire from="(620,480)" to="(670,480)"/>
     <wire from="(720,500)" to="(780,500)"/>
     <wire from="(780,440)" to="(780,500)"/>
-    <wire from="(620,480)" to="(660,480)"/>
+    <wire from="(620,390)" to="(660,390)"/>
     <wire from="(520,430)" to="(590,430)"/>
     <wire from="(590,430)" to="(590,520)"/>
-    <wire from="(590,520)" to="(660,520)"/>
     <wire from="(620,390)" to="(620,480)"/>
+    <wire from="(590,430)" to="(660,430)"/>
     <wire from="(520,390)" to="(620,390)"/>
-    <wire from="(590,430)" to="(670,430)"/>
     <wire from="(720,410)" to="(830,410)"/>
-    <comp lib="0" loc="(520,430)" name="Pin">
-      <a name="tristate" val="false"/>
+    <wire from="(590,520)" to="(670,520)"/>
+    <comp lib="1" loc="(720,410)" name="XOR Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(830,440)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(520,430)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(720,500)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(520,390)" name="Pin">
       <a name="tristate" val="false"/>
@@ -81,12 +87,6 @@
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(720,410)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(720,500)" name="XOR Gate">
-      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
